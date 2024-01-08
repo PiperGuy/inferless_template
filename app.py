@@ -10,7 +10,7 @@ class InferlessPythonModel:
     # replace ##task_type## and ##huggingface_name## with appropriate values
     def initialize(self):
         self.generator = pipeline("text-generation", model="EleutherAI/gpt-neo-125M", device=0)
-        self.path = "/var/nfs-mount/vol-demo/test/validator/temp.txt"
+        self.path = "/var/nfs-mount/new-test/test/validator/temp.txt"
     
         # Check if the directory exists, if not create it
         dir_path = os.path.dirname(self.path)
