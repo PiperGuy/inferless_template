@@ -10,20 +10,7 @@ class InferlessPythonModel:
     # replace ##task_type## and ##huggingface_name## with appropriate values
     def initialize(self):
         self.generator = pipeline("text-generation", model="EleutherAI/gpt-neo-125M", device=0)
-        self.path = "/var/nfs-mount/test/test/validator/temp.txt"
-    
-        # Check if the directory exists, if not create it
-        dir_path = os.path.dirname(self.path)
-        if not os.path.exists(dir_path):
-            os.makedirs(dir_path)
-    
-        # Check if the file exists, if not create it and write the content
-        if not os.path.exists(self.path):
-            with open(self.path, 'w') as file:
-                file.write("The validator file is created")
-            print("file created", flush=True)
-        else:
-            print("using existing file", flush =True)
+        
 
         
     # inputs is a dictonary where the keys are input names and values are actual input data
