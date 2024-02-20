@@ -14,8 +14,8 @@ configuration:
 
   # if you want to use a custom volume, add the volume id and name below,
   # you can find it by running `inferless volume list` or create one with `inferless volume create -n {VOLUME_NAME}`
-  custom_volume_id: ''
-  custom_volume_name: ''
+  custom_volume_id: '78ae513b-23f0-4e07-bd69-2641c2f2547a'
+  custom_volume_name: 'client-import'
 
   gpu_type: T4
   inference_time: '180'

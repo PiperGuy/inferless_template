@@ -12,7 +12,7 @@ class InferlessPythonModel:
         self.generator = pipeline(
             "text-generation", model="EleutherAI/gpt-neo-125M", device=0
         )
-        self.path = "/var/nfs-mount/Test-vol/test/validator/temp.txt"
+        self.path = "/var/nfs-mount/client-import/test/validator/temp.txt"
 
         # Check if the directory exists, if not create it
         dir_path = os.path.dirname(self.path)
