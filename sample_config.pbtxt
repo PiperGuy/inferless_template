@@ -1,0 +1,9 @@
+name: "model_name"
+platform: "platform_backend"
+input input_tensor
+output output_tensor
+instance_group [
+  {
+    kind: KIND_GPU
+  }
+]
