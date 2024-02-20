@@ -1,0 +1,14 @@
+{
+    "outputs": [
+        {
+            "data": [
+                "Once upon a time the sun was up he would look down to the valley below and wonder wis"
+            ],
+            "name": "generated_text",
+            "shape": [
+                1
+            ],
+            "datatype": "BYTES"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "inputs": [
+        {
+            "data": [
+                "Once upon a time"
+            ],
+            "name": "prompt",
+            "shape": [
+                1
+            ],
+            "datatype": "BYTES"
+        }
+    ]
+}
