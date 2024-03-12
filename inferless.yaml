@@ -10,7 +10,7 @@ source_framework_type: PYTORCH
 configuration:
   # if you want to use a custom runtime, add the runtime id below.
   # you can find it by running `inferless runtime list` or create one with `inferless runtime upload` and update this file it by running `inferless runtime select --id <RUNTIME_ID>`.
-  custom_runtime_id: ''
+  custom_runtime_id: '624fe502-91d8-430c-9935-d518db7fe12f'
 
   # if you want to use a custom volume, add the volume id and name below,
   # you can find it by running `inferless volume list` or create one with `inferless volume create -n {VOLUME_NAME}`
