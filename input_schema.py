@@ -1,10 +1,10 @@
 INPUT_SCHEMA = {
     "prompt": {
-        "type": str,
+        "datatype": "STRING",
         "required": True,
         "shape": [1],
-        "data": ["There is a fine house in the forest"],
-    },
-    "negative_prompt": {"type": str, "required": False, "example": None, "shape": [1]},
-    "width": {"type": int, "required": False, "example": [768, 512], "shape": [2]},
+        "example": [
+            "Hello, my name is Suno. And, uh — and I like pizza. [laughs] But I also have other interests such as playing tic tac toe."
+        ],
+    }
 }
