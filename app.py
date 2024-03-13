@@ -2,7 +2,6 @@ import json
 import numpy as np
 import torch
 from transformers import pipeline
-import os
 
 
 class InferlessPythonModel:
@@ -12,20 +11,6 @@ class InferlessPythonModel:
         self.generator = pipeline(
             "text-generation", model="EleutherAI/gpt-neo-125M", device=0
         )
-        self.path = "/var/nfs-mount/client-import/test/validator/temp.txt"
-
-        # Check if the directory exists, if not create it
-        dir_path = os.path.dirname(self.path)
-        if not os.path.exists(dir_path):
-            os.makedirs(dir_path)
-
-        # Check if the file exists, if not create it and write the content
-        if not os.path.exists(self.path):
-            with open(self.path, "w") as file:
-                file.write("The validator file is created")
-            print("file created", flush=True)
-        else:
-            print("using existing file", flush=True)
 
     # inputs is a dictonary where the keys are input names and values are actual input data
     # e.g. in the below code the input name is prompt
@@ -35,7 +20,7 @@ class InferlessPythonModel:
         prompt = inputs["prompt"]
         pipeline_output = self.generator(prompt, do_sample=True, min_length=20)
         generated_txt = pipeline_output[0]["generated_text"]
-        return {"generated_text": "sample sample output23"}
+        return {"generated_text": generated_txt}
 
     # perform any cleanup activity here
     def finalize(self, args):

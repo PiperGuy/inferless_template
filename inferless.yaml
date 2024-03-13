@@ -38,4 +38,4 @@ optional:
   output_file_name: output.json
 model_url: https://github.com/PiperGuy/inferless_template
 provider: GITHUB
-io_schema: false
+io_schema: true
