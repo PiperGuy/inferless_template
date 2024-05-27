@@ -1,7 +1,7 @@
 # Inferless config file (version: 1.0.0)
 version: 1.0.0
 
-name: inferless-template-2
+name: test-prod
 import_source: LOCAL
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
@@ -19,16 +19,17 @@ configuration:
 
   gpu_type: T4
   inference_time: '180'
-  is_dedicated: false
+  is_dedicated: true
   is_serverless: false
   max_replica: '1'
   min_replica: '0'
   scale_down_delay: '600'
+  region: region-1
   vcpu: '1.5'
-  ram: '10'
+  ram: '7'
 env:
   # Add your environment variables here
-  MODEL_WEIGHTS_DIR: 'PROD'
+  # ENV: 'PROD'
 secrets:
   # Add your secret ids here you can find it by running `inferless secrets list`
   # - 65723205-ce21-4392-a10b-3tf00c58988c
@@ -36,6 +37,7 @@ optional:
   # you can update file names here
   input_file_name: input.json
   output_file_name: output.json
-model_url: https://github.com/PiperGuy/inferless_template
-provider: GITHUB
 io_schema: true
+
+
+model_import_id: a62c6d43-d19d-4d42-acc5-53ad930fbbe0
