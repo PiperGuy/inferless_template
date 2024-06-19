@@ -2,7 +2,7 @@
 version: 1.0.0
 
 name: test
-import_source: GIT
+import_source: LOCAL
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
 source_framework_type: PYTORCH
@@ -10,27 +10,27 @@ source_framework_type: PYTORCH
 configuration:
   # if you want to use a custom runtime, add the runtime id below.
   # you can find it by running `inferless runtime list` or create one with `inferless runtime upload` and update this file it by running `inferless runtime select --id <RUNTIME_ID>`.
-  custom_runtime_id: 8e0e1f5d-38b4-42e7-8c4d-3cf30a138b52
-  custom_runtime_version: '0'
+  custom_runtime_id: ''
+  custom_runtime_version: ''
 
   # if you want to use a custom volume, add the volume id and name below,
   # you can find it by running `inferless volume list` or create one with `inferless volume create -n {VOLUME_NAME}`
   custom_volume_id: ''
   custom_volume_name: ''
 
-  gpu_type: T4
+  gpu_type: A100
   inference_time: '180'
-  is_dedicated: false
+  is_dedicated: true
   is_serverless: false
   max_replica: '1'
   min_replica: '0'
   scale_down_delay: '600'
   region: region-2
-  vcpu: '1.5'
-  ram: '10'
+  vcpu: '20.0'
+  ram: '200'
 env:
   # Add your environment variables here
-  ENV: 'PROD'
+  # ENV: 'PROD'
 secrets:
   # Add your secret ids here you can find it by running `inferless secrets list`
   # - 65723205-ce21-4392-a10b-3tf00c58988c
@@ -39,5 +39,4 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
 io_schema: true
-model_url: https://github.com/PiperGuy/inferless_template
-provider: GITHUB
+model_import_id: d888be13-da62-4947-921c-c0a6e7dfbe84
