@@ -1,7 +1,7 @@
 # Inferless config file (version: 1.0.0)
 version: 1.0.0
 
-name: test
+name: windows-test
 import_source: LOCAL
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
@@ -18,16 +18,16 @@ configuration:
   custom_volume_id: ''
   custom_volume_name: ''
 
-  gpu_type: A100
+  gpu_type: A10
   inference_time: '180'
-  is_dedicated: true
+  is_dedicated: false
   is_serverless: false
   max_replica: '1'
   min_replica: '0'
   scale_down_delay: '600'
-  region: region-2
-  vcpu: '20.0'
-  ram: '200'
+  region: region-1
+  vcpu: '3.0'
+  ram: '15'
 env:
   # Add your environment variables here
   # ENV: 'PROD'
@@ -39,4 +39,3 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
 io_schema: true
-model_import_id: d888be13-da62-4947-921c-c0a6e7dfbe84
