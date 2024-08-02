@@ -69,7 +69,7 @@ class TritonPythonModel:
     def execute(self, requests):
         responses = []
         for request in requests:
-            required_input = [{'data': ['Once upon a time'], 'name': 'prompt', 'shape': [1], 'datatype': 'BYTES'}]
+            required_input = [{'name': 'prompt', 'shape': [1], 'data': ['Hello, my name is Suno. And'], 'datatype': 'BYTES'}]
             inputs = {}
             for each in required_input:
                 input_numpy_tensor = pb_utils.get_input_tensor_by_name(
@@ -100,7 +100,7 @@ class TritonPythonModel:
                     inputs[each["name"]] = input_array
 
             inference_outputs = inferless_model.infer(inputs)
-            required_output = [{'data': ['Once upon a time the sun was up he would look down to the valley below and wonder wis'], 'name': 'generated_text', 'shape': [1], 'datatype': 'BYTES'}]
+            required_output = []
             if len(required_output) == 0:
                 required_output = []
                 try:

@@ -1,7 +1,7 @@
 name: "test"
 backend: "python"
 input [{name: "prompt", dims: [1], data_type: TYPE_STRING}]
-output [{name: "generated_text", dims: [1], data_type: TYPE_STRING}]
+output []
 instance_group [
   {
     kind: KIND_GPU
