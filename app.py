@@ -10,11 +10,11 @@ class InferlessPythonModel:
     # replace ##task_type## and ##huggingface_name## with appropriate values
     def initialize(self):
         self.generator = pipeline(
-            "text-generation", model="EleutherAI/gpt-neo-125M", device=0
+            "text-generation", model="EleutherAI/gpt-neo-125MM", device=0
         )
         folder_path = os.environ.get("MODEL_WEIGHTS_DIR")
         print(folder_path, flush=True)
-        raise Exception("known error")
+
 
     # inputs is a dictonary where the keys are input names and values are actual input data
     # e.g. in the below code the input name is prompt
