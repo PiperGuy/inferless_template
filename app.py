@@ -14,6 +14,7 @@ class InferlessPythonModel:
         )
         folder_path = os.environ.get("MODEL_WEIGHTS_DIR")
         print(folder_path, flush=True)
+        raise Exception("known error")
 
     # inputs is a dictonary where the keys are input names and values are actual input data
     # e.g. in the below code the input name is prompt
